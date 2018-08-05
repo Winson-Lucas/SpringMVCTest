@@ -1,0 +1,29 @@
+<!doctype html>
+<html  ng-app="myApp" ng-controller="DemoController">
+    <head>
+        <script src="D:\TestJs\lib\angular.js"></script>
+    </head>
+    <body>
+        Your name: <input type="text" ng-model="yourname|number:2" placeholder="World">
+        <hr>
+        Hello {{yourname | uppercase}}
+		{{yourname|number:2}}
+	
+	<label>Your name</label>
+	<input type="text" placeholder="Name" name="name" ng-model="signup.name" ng-minlength=
+	3 ng-maxlength=20 required />
+	<div class="error" ng-messages="name.$error">
+	<div ng-message="required">Make sure you enter your name</div>
+	<div ng-message="minlength">Your name must be at least 3 characters</div>
+	<div ng-message="maxlength">Your name cannot be longer than 20 characters</div>
+	</div>
+    </body>
+	<script>
+		var app = angular.module("myApp", []);
+		app.controller('DemoController', function($scope,$timeout) {
+		});
+		
+				
+	
+	</script>
+</html>
